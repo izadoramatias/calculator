@@ -40,15 +40,15 @@ button {
 button {
     border: none;
     min-height: 45px;
-    width: 95px;
+    width: 100%;
     background: transparent;
     color: white;
     font-size: 24px;
-    padding: 30px;
+    padding: 15px;
     transition: 0.3s ease-in;
 }
 
-@media (max-width: 400px){
+@media (max-width: 450px){
     button{
         max-width: 100%;
         max-height: 100%;
@@ -65,12 +65,15 @@ button {
         "c4 c5 c6 eq"
         "c1 c2 c3 eq"
         "c0 dec clear eq";
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns:repeat (4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    
 }
 
 @media (max-width: 450px){
     .calculator-keys{
-        grid-template-columns: repeat(minmax(70px, 1fr));
+    grid-template-rows: repeat(5, minmax(70px, 1fr));
+    grid-template-columns: repeat(4, minmax(70px, 1fr));
     }
 }
 
@@ -145,7 +148,6 @@ button {
     word-break: break-all;
     max-height: 122px;
     max-width: 380px;
-    margin-bottom: 25px;
 }
 
 .add,
@@ -156,15 +158,6 @@ button {
     color: #ff3a3a;
     font-weight: 400;
     font-size: 35px;
-}
-
-@media (max-width: 400px){
-    .add,
-    .subtract,
-    .multiply,
-    .divide{
-        max-height: 92.2px;
-    }
 }
 
 div.calculator-keys > button:nth-child(n + 6):active:focus {
