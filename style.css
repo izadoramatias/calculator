@@ -1,0 +1,178 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body,
+html{
+    background: #141414;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body,
+button {
+    font-family: "DM Sans", sans-serif;
+}
+
+.calculator {
+    height: 100%;
+    width: 420px;
+    box-shadow: -10px -10px 15px rgba(0, 0, 0, 0.2),
+        10px 10px 15px rgba(70, 70, 70, 0.12);
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+}
+
+@media (max-width: 450px){
+    .calculator{
+        width: 100%;
+        height: 100%;
+        box-shadow: none;
+        overflow: hidden;
+    }
+}
+
+button {
+    border: none;
+    min-height: 45px;
+    width: 95px;
+    background: transparent;
+    color: white;
+    font-size: 24px;
+    padding: 30px;
+    transition: 0.3s ease-in;
+}
+
+@media (max-width: 400px){
+    button{
+        max-width: 100%;
+        max-height: 100%;
+        padding: 20px;
+    }
+}
+
+.calculator-keys {
+    display: grid;
+    grid-gap: 1px;
+    grid-template-areas:
+        "koa kos kom kod"
+        "c7 c8 c8 eq"
+        "c4 c5 c6 eq"
+        "c1 c2 c3 eq"
+        "c0 dec clear eq";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+@media (max-width: 450px){
+    .calculator-keys{
+        grid-template-columns: repeat(minmax(70px, 1fr));
+    }
+}
+
+.add {
+    grid-area: koa;
+}
+
+.subtract {
+    grid-area: kos;
+}
+
+.multiply {
+    grid-area: kom;
+}
+
+.divide {
+    grid-area: kod;
+}
+
+.equality {
+    grid-area: eq;
+}
+
+.c7 {
+    grid-area: c7;
+}
+
+.c6 {
+    grid-area: c6;
+}
+
+.c5 {
+    grid-area: c5;
+}
+
+.c4 {
+    grid-area: c4;
+}
+
+.c3 {
+    grid-area: c3;
+}
+
+.c2 {
+    grid-area: c2;
+}
+
+.c1 {
+    grid-area: c1;
+}
+
+.c0 {
+    grid-area: c0;
+}
+
+.decimal {
+    grid-area: dec;
+}
+
+.clear {
+    grid-area: clear;
+}
+
+.display {
+    margin: 20px;
+    font-size: 45px;
+    color: #ffffff;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    word-break: break-all;
+    max-height: 122px;
+    max-width: 380px;
+    margin-bottom: 25px;
+}
+
+.add,
+.subtract,
+.multiply,
+.divide,
+.equality {
+    color: #ff3a3a;
+    font-weight: 400;
+    font-size: 35px;
+}
+
+@media (max-width: 400px){
+    .add,
+    .subtract,
+    .multiply,
+    .divide{
+        max-height: 92.2px;
+    }
+}
+
+div.calculator-keys > button:nth-child(n + 6):active:focus {
+    background: #0d0c0c;
+    font-size: 20px;
+}
+
+div.calculator-keys > button:nth-child(-n + 5):focus:active {
+    background: #0d0c0c;
+    font-size: 30px;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edg e" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculator</title>
+
+    <!-- STYLE -->
+    <link rel="stylesheet" href="style.css"/>
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="calculator">
+      <div class="display">
+        <p id="result" class="result"></p>
+      </div>
+
+      <div class="calculator-keys">
+        <button class="add" onclick="insert('+')">+</button>
+        <button class="subtract" onclick="insert('-')">-</button>
+        <button class="multiply" onclick="insert('*')">&times;</button>
+        <button class="divide" onclick="insert('/')">÷</button>
+        <button class="equality" onclick="calculate()">=</button>
+        <button class="c7" onclick="insert('7')">7</button>
+        <button class="c8" onclick="insert('8')">8</button>
+        <button class="c9" onclick="insert('9')">9</button>
+        <button class="c4" onclick="insert('4')">4</button>
+        <button class="c5" onclick="insert('5')">5</button>
+        <button class="c6" onclick="insert('6')">6</button>
+        <button class="c1" onclick="insert('1')">1</button>
+        <button class="c2" onclick="insert('2')">2</button>
+        <button class="c3" onclick="insert('3')">3</button>
+        <button class="c0" onclick="insert('0')">0</button>
+        <button class="decimal" onclick="insert('.')">.</button>
+        <button class="clear" onclick="clearResultOnDisplay()">C</button>
+      </div>
+    </div>
+
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
